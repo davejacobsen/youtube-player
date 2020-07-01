@@ -17,6 +17,10 @@
 		D5E5506D24ABC4DD00E59361 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E5506C24ABC4DD00E59361 /* Video.swift */; };
 		D5E5506F24ABC53A00E59361 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E5506E24ABC53A00E59361 /* Model.swift */; };
 		D5E5507124ABD00F00E59361 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E5507024ABD00F00E59361 /* Response.swift */; };
+		D5E5507324ABE6E100E59361 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E5507224ABE6E100E59361 /* VideoTableViewCell.swift */; };
+		D5E5507524ABEEF900E59361 /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E5507424ABEEF900E59361 /* CacheManager.swift */; };
+		D5E5507724ABF24900E59361 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5E5507624ABF24900E59361 /* DetailViewController.swift */; };
+		D5E5507A24AC217C00E59361 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5E5507924AC217C00E59361 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		D5E5506C24ABC4DD00E59361 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		D5E5506E24ABC53A00E59361 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		D5E5507024ABD00F00E59361 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		D5E5507224ABE6E100E59361 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
+		D5E5507424ABEEF900E59361 /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		D5E5507624ABF24900E59361 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		D5E5507924AC217C00E59361 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5E5507A24AC217C00E59361 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -50,6 +59,7 @@
 			children = (
 				D5E5505424ABB9AA00E59361 /* youtube-player */,
 				D5E5505324ABB9AA00E59361 /* Products */,
+				D5E5507824AC217C00E59361 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,6 +82,9 @@
 				D5E5506C24ABC4DD00E59361 /* Video.swift */,
 				D5E5506E24ABC53A00E59361 /* Model.swift */,
 				D5E5507024ABD00F00E59361 /* Response.swift */,
+				D5E5507224ABE6E100E59361 /* VideoTableViewCell.swift */,
+				D5E5507424ABEEF900E59361 /* CacheManager.swift */,
+				D5E5507624ABF24900E59361 /* DetailViewController.swift */,
 			);
 			path = "youtube-player";
 			sourceTree = "<group>";
@@ -85,6 +98,14 @@
 				D5E5506024ABB9AC00E59361 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		D5E5507824AC217C00E59361 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D5E5507924AC217C00E59361 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,10 +180,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5E5505A24ABB9AA00E59361 /* ViewController.swift in Sources */,
+				D5E5507524ABEEF900E59361 /* CacheManager.swift in Sources */,
 				D5E5505624ABB9AA00E59361 /* AppDelegate.swift in Sources */,
 				D5E5505824ABB9AA00E59361 /* SceneDelegate.swift in Sources */,
 				D5E5506F24ABC53A00E59361 /* Model.swift in Sources */,
 				D5E5506B24ABC28D00E59361 /* Constants.swift in Sources */,
+				D5E5507324ABE6E100E59361 /* VideoTableViewCell.swift in Sources */,
+				D5E5507724ABF24900E59361 /* DetailViewController.swift in Sources */,
 				D5E5506D24ABC4DD00E59361 /* Video.swift in Sources */,
 				D5E5507124ABD00F00E59361 /* Response.swift in Sources */,
 			);

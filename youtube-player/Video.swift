@@ -9,16 +9,16 @@
 import Foundation
 
 struct Video: Decodable {
-    var ID = ""
+    var videoId = ""
     var title = ""
     var description = ""
     var thumbnail = ""
-    var datePublished: Date
+    var published = Date()
     
     enum CodingKeys: String, CodingKey {
-        case datePublished = "publishedAt"
+        case published = "publishedAt"
         case title
-        case ID = "videoID"
+        case videoId
         case thumbnail = "url"
         case description
         
@@ -35,7 +35,7 @@ struct Video: Decodable {
         
         self.title = try snippetContainer.decode(String.self, forKey: .title)
         self.description = try snippetContainer.decode(String.self, forKey: .description)
-        self.datePublished = try snippetContainer.decode(Date.self, forKey: .datePublished)
+        self.published = try snippetContainer.decode(Date.self, forKey: .published)
         
         let thumbnailContainer = try snippetContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .thumbnails)
         let highContainer = try thumbnailContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .high)
@@ -43,6 +43,6 @@ struct Video: Decodable {
         
         let resourceIdContainer = try snippetContainer.nestedContainer(keyedBy: CodingKeys.self, forKey: .resourceId)
         
-        self.ID = try resourceIdContainer.decode(String.self, forKey: .ID)
+        self.videoId = try resourceIdContainer.decode(String.self, forKey: .videoId)
     }
 }
