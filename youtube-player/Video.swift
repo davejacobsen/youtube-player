@@ -29,7 +29,7 @@ struct Video: Decodable {
     }
     
     init (from decoder: Decoder) throws {
-       let container = try decoder.container(keyedBy: CodingKeys.self)
+        let container = try decoder.container(keyedBy: CodingKeys.self)
         
         let snippetContainer = try container.nestedContainer(keyedBy: CodingKeys.self, forKey: .snippet)
         

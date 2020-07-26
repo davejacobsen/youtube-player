@@ -9,7 +9,7 @@
 import UIKit
 
 class VideoTableViewCell: UITableViewCell {
-
+    
     @IBOutlet weak var thumbnailImageView: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
@@ -18,15 +18,12 @@ class VideoTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-
+    
     func setCell(_ v: Video) {
         self.video = v
         print("title: \(v.title)")
@@ -54,7 +51,7 @@ class VideoTableViewCell: UITableViewCell {
                 print("no data")
                 return
             }
-
+            
             CacheManager.setVideoCache(url.absoluteString, data)
             
             if url.absoluteString != v.thumbnail {
@@ -67,10 +64,7 @@ class VideoTableViewCell: UITableViewCell {
             DispatchQueue.main.async {
                 self.thumbnailImageView.image = image
             }
-            
         }
-        
         dataTask.resume()
     }
-    
 }

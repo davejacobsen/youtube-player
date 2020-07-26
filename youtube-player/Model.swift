@@ -32,18 +32,12 @@ class Model {
                 print("error: \(error.localizedDescription)")
             }
             
-            guard let data = data else {
-                print("no data")
-                return
-            }
-
+            guard let data = data else { return }
+            
             do {
-                print("doing")
                 let decoder = JSONDecoder()
                 decoder.dateDecodingStrategy = .iso8601
                 let response = try decoder.decode(Response.self, from: data)
-           //     dump(response)
-             //   print("dump run")
                 
                 guard let items = response.items else { return }
                 DispatchQueue.main.async {
@@ -51,10 +45,9 @@ class Model {
                 }
             }
             catch {
-              print("catched")
+                print("catched")
             }
         }
-        
         dataTask.resume()
     }
 }
