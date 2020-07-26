@@ -7,6 +7,7 @@ Caching, WebKit, date formatting, URLSessions, and custom cells
 
 The app pulls videos from Mark Rober's youtube channel. 
 
-Screenshots
+Screenshots:
 
+<img src="Screenshots/Screenshots.png" width="500">
 
